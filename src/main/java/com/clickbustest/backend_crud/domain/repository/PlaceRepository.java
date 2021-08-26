@@ -8,6 +8,7 @@ import java.util.List;
 
 public interface PlaceRepository extends JpaRepository<Place,Long> {
 
-    @Query(value = "select u from Place u where trim (u.name) like %?1%")
-    List<Place> findPlaceByNam(String name);
+        @Query(value = "select u from Place u where trim(u.name) like %?1%")
+        List<Place> buscarPorNome(String name);
+
 }

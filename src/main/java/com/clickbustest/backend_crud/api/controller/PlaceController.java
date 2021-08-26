@@ -32,8 +32,8 @@ public class PlaceController {
     }
 
     @GetMapping("/search/{placeName}")
-    public List<Place> findPlaceByName(@PathVariable String placeName){
-        return placeRepository.findPlaceByNam(placeName);
+    public List<Place> findByName(@PathVariable String placeName){
+        return placeRepository.buscarPorNome(placeName.trim());
     }
 
     @PostMapping
